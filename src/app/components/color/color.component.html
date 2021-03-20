@@ -1,18 +1,19 @@
-<h3 class="text-info bg-dark">Renk Bilgileri</h3>
 
 <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
 
-<table *ngIf="dataLoaded==true" class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Renk Adı</th>      
-        </tr>
-    </thead>
-    <tr *ngFor="let color of colors">
-        <td>{{color.colorId}}</td>
-        <td>{{color.colorName}}</td>   
-    </tr>
-</table>
+
+  <div>
+        <h3 style="color: darkmagenta">Renk Seçimi</h3>
+    <ul class="list-group">
+        <li [class]="getAllColorClass()" routerLink="/cars" >Tüm ürünler</li>
+        <li (click)="setCurrentColor(color)" *ngFor="let color of colors"
+             routerLink="/cars/color/{{color.colorId}}" 
+             [class]="getCurrentColorClass(color)" class="list-group-item">{{color.colorName}}</li>
+    </ul>
+
+
+      
+</div>
+

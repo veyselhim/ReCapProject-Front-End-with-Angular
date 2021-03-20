@@ -1,11 +1,4 @@
-<ul class="list-group">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
-  <h3 class="text-info bg-dark">Müşteri Bilgileri</h3>
+
 
 
   <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
@@ -16,16 +9,19 @@
 
 
 <table  *ngIf="dataLoaded==true" class="table">
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>Id</th>
             <th>Kullanıcı Adı</th>
             <th>Şirket Adı</th>         
         </tr>
     </thead>
-    <tr *ngFor="let customer of customers">
+    <tbody>
+      <tr *ngFor="let customer of customers">
         <td>{{customer.customerId}}</td>
         <td>{{customer.userId}}</td>
         <td>{{customer.companyName}}</td>     
     </tr>
+    </tbody>
+   
 </table>

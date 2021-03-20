@@ -1,6 +1,5 @@
 
 
-  <h3 class="text-info bg-dark">Kiralama Bilgileri</h3>
 
 
   <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
@@ -12,7 +11,7 @@
 <table *ngIf="dataLoaded==true" class="table">
 
   
-    <thead>
+    <thead class="table-dark">
         <tr>
             <th>Id</th>
             <th>Müşteri Adı</th>
@@ -21,11 +20,14 @@
             <th>Teslim Tarihi</th>
         </tr>
     </thead>
-    <tr *ngFor="let rental of rentals">
-        <td>{{rental.id}}</td>
-        <td>{{rental.customerName}}</td>
-        <td>{{rental.carName}}</td>     
-        <td>{{rental.rentDate}}</td>     
-        <td>{{rental.returnDate}}</td>     
-    </tr>
+    <tbody>
+        <tr *ngFor="let rental of rentals">
+            <td>{{rental.id}}</td>
+            <td>{{rental.customerName}}</td>
+            <td>{{rental.carName}}</td>     
+            <td>{{rental.rentDate |date:'d.M.y'}}</td>     
+            <td>{{rental.returnDate |date:'d.M.y'}}</td>     
+        </tr>
+    </tbody>
+   
 </table>
