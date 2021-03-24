@@ -12,6 +12,7 @@ export class ColorComponent implements OnInit {
 
   colors:Color[]=[];
   dataLoaded=false;
+  colorId:number;
   currentColor:Color={colorId:0,colorName:""};
   constructor(private colorService:ColorService) { }
 
@@ -30,11 +31,11 @@ export class ColorComponent implements OnInit {
     this.currentColor=color;
   }
 
-  getCurrentColorClass(color:Color){
-    if(color == this.currentColor){
-      return "list-group-item active"
+  getCurrentColorClass(colorId:number){
+    if(this.colorId==colorId){
+      return true
     }else{
-      return "list-group-item"
+      return false
     }
   }
 
@@ -45,5 +46,9 @@ export class ColorComponent implements OnInit {
       return "list-group-item"
     }
 
+  }
+
+  selectChangeHandler (event:any){
+    this.currentColor = event.target.value;
   }
 }

@@ -11,5 +11,6 @@ export class NaviComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  filterText="";
 
 }

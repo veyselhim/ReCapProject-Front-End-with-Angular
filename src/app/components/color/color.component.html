@@ -4,7 +4,7 @@
   </div>
 
 
-  <div>
+  <!-- <div>
         <h3 style="color: darkmagenta">Renk Seçimi</h3>
     <ul class="list-group">
         <li [class]="getAllColorClass()" routerLink="/cars" >Tüm ürünler</li>
@@ -16,4 +16,23 @@
 
       
 </div>
+ -->
 
+
+ <div>
+
+    <select (change)="selectChangeHandler($event)" [(ngModel)]="colorId"  class="form-select" aria-label="Default select example">
+  
+      <option selected  routerLink="cars" >Tüm ürünler</option>
+    
+      <option  *ngFor="let color of colors" 
+      [selected]="getCurrentColorClass(color.colorId)"class="form-select" [value]="color.colorId"   >{{color.colorName}}</option>
+    
+  
+    </select> 
+  
+    <button routerLink="cars/color/{{colorId}}"    type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
+  
+  
+  </div>
+  

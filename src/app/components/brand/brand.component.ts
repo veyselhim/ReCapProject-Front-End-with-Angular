@@ -10,6 +10,7 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {
 
   brands:Brand[]=[];
+  brandId:number;
   currentBrand:Brand={brandId:0,brandName:""};
   dataLoaded=false;
   constructor(private brandService:BrandService) { }
@@ -29,22 +30,28 @@ export class BrandComponent implements OnInit {
       this.currentBrand=brand;
     }
 
-    getCurrentBrandClass(brand:Brand){
-      if(brand == this.currentBrand){
-        return "list-group-item active"
+    getCurrentBrandClass(brandId:number){
+      if(this.brandId==brandId){
+        return true
       }else{
-        return "list-group-item"
+        return false
       }
     }
 
     getAllBrandClass(){
       if(!this.currentBrand){
-        return "list-group-item active"
+        return "form-select active"
       }else{
-        return "list-group-item"
+        return "form-select"
       }
 
     }
+
+    selectChangeHandler (event:any){
+      this.currentBrand = event.target.value;
+    }
+
+    
 }
     
   

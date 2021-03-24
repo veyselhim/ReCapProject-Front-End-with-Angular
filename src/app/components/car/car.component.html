@@ -4,7 +4,15 @@
     <span class="visually-hidden">Loading...</span>
   </div>
 
-
+  <div class="mb-3">
+    <label for="filterText" class="form-label">Ürün ara</label>
+    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="arama ifadesi giriniz" aria-describedby="emailHelp">
+  
+  </div>
+  
+  <div *ngIf="filterText" class="alert alert-success">
+      {{filterText}} aradınız
+  </div>
 
 <table *ngIf="dataLoaded==true" class="table">
     <thead class="table-dark">
@@ -14,16 +22,18 @@
             <th>Marka Adı</th>
             <th>Renk Adı</th>
             <th>Birim Fiyatı</th>
+            <th>KDV'li Fiyat</th>
             <th>Detay Bilgiler</th>
         </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of cars">
+      <tr *ngFor="let car of cars | filterPipe:filterText">
         <td>{{car.carId}}</td>
-        <td>{{car.carName}}</td>
+        <td>{{car.carName |uppercase}}</td>
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
-        <td>{{car.unitPrice}}</td>
+        <td>{{car.unitPrice |currency:"TRY":"₺":""}}</td>
+        <td>{{car.unitPrice |vatAdded:18 |currency: "TRY":"₺":"" }}</td>
         <td><button  routerLink="/cars/cardetail/{{car.carId}}" type="button" class="btn btn-success" style="width: 90px;" >Detay</button></td>
 
      </tr>
