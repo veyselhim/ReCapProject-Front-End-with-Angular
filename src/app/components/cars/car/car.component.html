@@ -35,6 +35,7 @@
         <td>{{car.unitPrice |currency:"TRY":"₺":""}}</td>
         <td>{{car.unitPrice |vatAdded:18 |currency: "TRY":"₺":"" }}</td>
         <td><button  routerLink="/cars/cardetail/{{car.carId}}" type="button" class="btn btn-success" style="width: 90px;" >Detay</button></td>
+        <td><button  routerLink="/cars/update/{{car.carId}}" type="button" class="btn btn-success" style="width: 90px;" >Güncelle</button></td>
 
      </tr>
     </tbody>

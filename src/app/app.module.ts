@@ -7,21 +7,23 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import{ToastrModule} from 'ngx-toastr';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarComponent } from './components/car/car.component';
-import { BrandComponent } from './components/brand/brand.component';
-import { ColorComponent } from './components/color/color.component';
-import { RentalComponent } from './components/rental/rental.component';
+import { CarComponent } from './components/cars/car/car.component';
+import { BrandComponent } from './components/brands/brand/brand.component';
+import { ColorComponent } from './components/colors/color/color.component';
+import { RentalComponent } from './components/rentals/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { CustomerComponent } from './components/customer/customer.component';
-import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { CarDetailComponent } from './components/cars/car-detail/car-detail.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
-import { RentalDetailComponent } from './components/rental-detail/rental-detail.component';
-import { CarAddComponent } from './components/car-add/car-add.component';
-import { BrandAddComponent } from './components/brand-add/brand-add.component';
-import { ColorAddComponent } from './components/color-add/color-add.component';
+import { RentalDetailComponent } from './components/rentals/rental-detail/rental-detail.component';
+import { CarAddComponent } from './components/cars/car-add/car-add.component';
+import { BrandAddComponent } from './components/brands/brand-add/brand-add.component';
+import { ColorAddComponent } from './components/colors/color-add/color-add.component';
+import { CarUpdateComponent } from './components/cars/car-update/car-update.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { ColorAddComponent } from './components/color-add/color-add.component';
     RentalDetailComponent,
     CarAddComponent,
     BrandAddComponent,
-    ColorAddComponent
+    ColorAddComponent,
+    CarUpdateComponent,
   ],
   imports: [
     BrowserModule,
