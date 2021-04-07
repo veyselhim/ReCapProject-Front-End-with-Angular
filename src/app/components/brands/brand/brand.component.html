@@ -5,22 +5,26 @@
 
 
 
-<div>
+<div style="width: 200px;  float: right; margin-right: 65px;">
 
-  <select (change)="selectChangeHandler($event)" [(ngModel)]="brandId"  class="form-select" aria-label="Default select example">
+  <select (change)="selectChangeHandler($event)" [(ngModel)]="brandId"  class="form-select" aria-label="Default select example" >
 
-    <option selected  routerLink="cars" >Tüm ürünler</option>
+    <option selected routerLink = "/cars">Tüm ürünler</option>
   
     <option  *ngFor="let brand of brands" 
-    [selected]="getCurrentBrandClass(brand.brandId)"class="form-select" [value]="brand.brandId"   >{{brand.brandName}}</option>
+    [selected]="getCurrentBrandClass(brand.brandId)"class="form-select" [value]="brand.brandId" >{{brand.brandName}}</option>
   
 
   </select> 
 
-  <button routerLink="cars/brand/{{brandId}}"    type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
 
 
 </div>
 
+
+<div style=" display: inline-block; float: right;" >
+  <button routerLink="/cars/brand/{{brandId}}" type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
+
+</div>
 
 

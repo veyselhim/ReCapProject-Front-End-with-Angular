@@ -19,7 +19,7 @@
  -->
 
 
- <div>
+ <div style="width: 200px; display: inline-block;">
 
     <select (change)="selectChangeHandler($event)" [(ngModel)]="colorId"  class="form-select" aria-label="Default select example">
   
@@ -31,8 +31,12 @@
   
     </select> 
   
-    <button routerLink="cars/color/{{colorId}}"    type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
+
   
   
   </div>
-  
+
+  <div style="display: inline-block;">
+    <button routerLink="/cars/color/{{colorId}}"    type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
+
+  </div>

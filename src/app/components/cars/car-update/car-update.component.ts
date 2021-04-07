@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Car } from 'src/app/models/car';
+import { CarDetail } from 'src/app/models/carDetail';
 import { CarService } from 'src/app/services/car.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class CarUpdateComponent implements OnInit {
 
   constructor(private carService:CarService,private formBuilder:FormBuilder,private toastrService:ToastrService,private activetedRoute:ActivatedRoute) { }
 
-  car:Car[];
+  car:CarDetail[];
   carId:number;
   carUpdateForm:FormGroup;
 
@@ -22,9 +23,9 @@ export class CarUpdateComponent implements OnInit {
     this.activetedRoute.params.subscribe(params=>{
       if(params["carId"]){
         this.carId=params["carId"];
-        this.createCarUpdateForm(params["carId"]);
-        this.getCarDetails(params["carId"]);
       }
+      this.createCarUpdateForm();
+
     })
 
   }
@@ -37,7 +38,7 @@ getCarDetails(carId:number)
     })
   }
 
-  createCarUpdateForm(carId:number){
+  createCarUpdateForm(){
     this.carUpdateForm=this.formBuilder.group({
         carName:["",Validators.required],
         brandId:["",Validators.required],
@@ -49,16 +50,18 @@ getCarDetails(carId:number)
   
   update(){
     if(this.carUpdateForm.valid){
-      let car = Object.assign({},this.carUpdateForm.value)
-      car.carId=this.carId;
+     // console.log(this.carUpdateForm)
+      let car:Car = Object.assign({carId:this.carId},this.carUpdateForm.value)
       console.log(car)
+      car.carId=Number(car.carId)
       this.carService.update(car).subscribe(data=>{
         this.toastrService.success(data.message,"Başarılı")
       },dataError=>{
         if(dataError.error.Errors.length>0){
-          for (let i = 0; i < dataError.error.Errors.length; i++) {
-            
-              this.toastrService.error(dataError.error.Errors[i].ErrorMessage,"Doğrulama Hatası")
+
+          for(let i = 0 ; i<dataError.error.Errors.length;i++)
+          {
+            this.toastrService.error(dataError.error.Errors[i].ErrorMessage)
           }
         }
       })

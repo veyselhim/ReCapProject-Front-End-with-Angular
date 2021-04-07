@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Car } from 'src/app/models/car';
+import { CarDetail } from 'src/app/models/carDetail';
 import { CarService } from 'src/app/services/car.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-car',
@@ -10,7 +11,10 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarComponent implements OnInit {
 
-  cars: Car[] = []
+
+  imageBasePath = environment.baseUrl;
+  defaultImg="/images/default.png"
+  cars: CarDetail[] = []; 
   dataLoaded=false;
   filterText="";
   constructor(private carService:CarService,private activatedRoute:ActivatedRoute) { }
@@ -23,7 +27,7 @@ export class CarComponent implements OnInit {
       }else if(params["colorId"]){
         this.getCarsByColor(params["colorId"]);
       }else{
-        this.getCars();
+        this.getCarDetails();
       }
     })
 
@@ -31,8 +35,8 @@ export class CarComponent implements OnInit {
     
   }
 
-  getCars() {
-     this.carService.getCars().subscribe(response=>{
+  getCarDetails() {
+     this.carService.getCarDetails().subscribe(response=>{
        this.cars=response.data
        this.dataLoaded=true;
      })      
@@ -60,5 +64,12 @@ export class CarComponent implements OnInit {
      this.dataLoaded=true;
    })
  }
+
+
+
+
+
+
+ 
 
 }
