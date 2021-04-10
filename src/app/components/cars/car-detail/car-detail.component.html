@@ -1,23 +1,23 @@
 
 
 
-<div  class="card" style="height: 700px">
+<div  class="card" style="height: auto; width: 75%; margin-left: 170px; ">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body" style="height: 400px;">
-      <h5 class="card-title">Card title</h5>
+    <div class="card-body" style="height: auto;">
+      <h5 class="card-title">Image</h5>
       
       <div class="carousel-inner">
         <div *ngFor="let car of Images ; index as i; first as firstImage " [ngClass]="{ active: firstImage }" class="carousel-item " data-bs-interval="10000">
-          <img [src]="carDto.images.length !== 0 ? imageBasePath+ car: imageBasePath + defaultImg" width="300" height="425" class="d-block w-100" alt="Image">  
+          <img [src]="carDto.images.length !== 0 ? imageBasePath+ car: imageBasePath + defaultImg" width="auto" height="auto" class="d-block w-100" alt="Image">  
           </div>
         </div>
 
 
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Araba Adı : {{carDto.carName}}</li>
-      <li class="list-group-item">Markası : {{carDto.brandName}}</li>
-      <li class="list-group-item">Rengi : {{carDto.colorName}}</li>
+      <li class="list-group-item">Car Name : {{carDto.carName}}</li>
+      <li class="list-group-item">Brand : {{carDto.brandName}}</li>
+      <li class="list-group-item">Color : {{carDto.colorName}}</li>
     </ul>
     <div class="card-body">
      

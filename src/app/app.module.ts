@@ -27,6 +27,9 @@ import { CarUpdateComponent } from './components/cars/car-update/car-update.comp
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrandDetailComponent } from './components/brands/brand-detail/brand-detail.component';
+import { MyPageComponent } from './components/my-page/my-page.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { FooterComponent } from './components/footer/footer.component';
     CarUpdateComponent,
     LoginComponent,
     FooterComponent,
+    BrandDetailComponent,
+    MyPageComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import { ColorAddComponent } from './components/colors/color-add/color-add.compo
 import { RentalDetailComponent } from './components/rentals/rental-detail/rental-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGuard } from './guards/login.guard';
+import { BrandDetailComponent } from './components/brands/brand-detail/brand-detail.component';
+import { MyPageComponent } from './components/my-page/my-page.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
@@ -21,7 +24,12 @@ const routes: Routes = [
   {path:"brands/add",component:BrandAddComponent , canActivate:[LoginGuard]},
   {path:"colors/add",component:ColorAddComponent , canActivate:[LoginGuard]},
   {path:"cars/update/:carId",component:CarUpdateComponent , canActivate:[LoginGuard]},
-  {path:"login",component:LoginComponent}
+  {path:"login",component:LoginComponent},
+  {path:"brands",component:BrandDetailComponent},
+  {path:"mypage",component:MyPageComponent},
+  {path:"contact",component:ContactComponent}
+
+
 ];
 
 @NgModule({

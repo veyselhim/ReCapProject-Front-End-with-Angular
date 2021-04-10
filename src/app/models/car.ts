@@ -5,4 +5,5 @@ export interface Car{
     brandId:number;
     carName:string;
     unitPrice:number;
+
 }
