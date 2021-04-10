@@ -1,28 +1,128 @@
-# Recap
+# Rent A Car Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+![rentACar](https://github.com/veyselhim/ReCapProject/blob/master/banner.png?raw=true)
 
-## Development server
+--------------------------------------
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### To go to the backend : ![github](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/github.png)
 
-## Code scaffolding
+---------------------------------------
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Front End Files
 
-## Build
+- ***Components*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  * brands
+  * cars
+  * colors
+  * contact
+  * customer
+  * footer
+  * login
+  * my-page
+  * navi
+  * rentals
 
-## Running unit tests
+  ***Models*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  * brand.ts
+  * car.ts
+  * carDetail.ts
+  * card.ts
+  * cardDetail.ts
+  * carImage.ts
+  * color.ts
+  * customer.ts
+  * listResponseModel.ts
+  * loginModel.ts
+  * rental.ts
+  * responseModel.ts
+  * singleResponseModel.ts
+  * tokenModel.ts
 
-## Running end-to-end tests
+- ***Pipes*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  * filter-pipe.ts
+  * vat-added.ts
 
-## Further help
+- ***Services*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# ReCapProject-Front-End-with-Angular" 
+  * auth.service.ts
+  * brand.service.ts
+  * car.service.ts
+  * car-detail.service.ts
+  * card.service.ts
+  * carImage.service.ts
+  * color.service.ts
+  * customer.service.ts
+  * rental.service.ts
+
+- ***Guards*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
+
+  * login.guard.ts
+
+    
+
+#                           Page Images
+
+
+
+## Home Page
+
+![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/home.png)
+
+
+
+![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/home2.png)
+
+
+
+![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/home3.png)
+
+## Car Detail Page
+
+![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail.png)
+
+![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail2.png)
+
+
+
+## Car Add And Update
+
+![add](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/caradd.png)
+
+![carupdate](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/carupdate.png)
+
+## Brand and Color Add Page
+
+![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/addbrand.png)
+
+![color](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/addcolor.png)
+
+## Contact Page
+
+![contact](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/contact.png)
+
+
+
+## My Page
+
+![contact](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/mypage.png)
+
+
+
+## Rent Page 
+
+![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/rent.png)
+
+
+
+## Login Page
+
+![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/login.png)
+
+## Toastr Notification
+
+![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr.png)
+
+![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr2.png)
