@@ -23,6 +23,8 @@
   * my-page
   * navi
   * rentals
+  * register
+  
 
   ***Models*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
@@ -40,6 +42,8 @@
   * responseModel.ts
   * singleResponseModel.ts
   * tokenModel.ts
+  * user.ts
+  * registerModel.ts
 
 - ***Pipes*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
@@ -57,6 +61,7 @@
   * color.service.ts
   * customer.service.ts
   * rental.service.ts
+  * user.service.ts
 
 - ***Guards*** ![folder](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/folder.png)
 
@@ -82,9 +87,9 @@
 
 ## Car Detail Page
 
-![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail.png)
+![cardet](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail.png)
 
-![home](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail2.png)
+![cardet](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/cardetail2.png)
 
 
 
@@ -108,14 +113,17 @@
 
 ## My Page
 
-![contact](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/mypage.png)
+![mypage](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/mypage.png)
 
 
 
 ## Rent Page 
 
-![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/rent.png)
+![rent](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/rent.png)
 
+## Register Page
+
+![register](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/image.png)
 
 
 ## Login Page
@@ -124,6 +132,6 @@
 
 ## Toastr Notification
 
-![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr.png)
+![toastr](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr.png)
 
-![brand](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr2.png)
+![toastr](https://github.com/veyselhim/ReCapProject-Front-End-with-Angular/blob/main/angularProjeScreenShots/toastr2.png)
