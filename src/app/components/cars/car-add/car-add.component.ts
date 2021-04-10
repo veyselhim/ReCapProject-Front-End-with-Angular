@@ -30,7 +30,8 @@ export class CarAddComponent implements OnInit {
         carName:["",Validators.required],
         brandId:["",Validators.required],
         colorId:["",Validators.required],
-        unitPrice:["",Validators.required]
+        unitPrice:["",Validators.required],
+        carFindexScore:["",Validators.required]
     })      
   }
 

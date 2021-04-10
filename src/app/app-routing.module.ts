@@ -12,6 +12,7 @@ import { LoginGuard } from './guards/login.guard';
 import { BrandDetailComponent } from './components/brands/brand-detail/brand-detail.component';
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"brands",component:BrandDetailComponent},
   {path:"mypage",component:MyPageComponent},
-  {path:"contact",component:ContactComponent}
+  {path:"contact",component:ContactComponent},
+  {path:"register",component:RegisterComponent}
+
 
 
 ];

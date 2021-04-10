@@ -43,7 +43,8 @@ getCarDetails(carId:number)
         carName:["",Validators.required],
         brandId:["",Validators.required],
         colorId:["",Validators.required],
-        unitPrice:["",Validators.required]
+        unitPrice:["",Validators.required],
+        carFindexScore:["",Validators.required]
     })      
   }
   

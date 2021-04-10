@@ -30,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrandDetailComponent } from './components/brands/brand-detail/brand-detail.component';
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ContactComponent } from './components/contact/contact.component';
     BrandDetailComponent,
     MyPageComponent,
     ContactComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

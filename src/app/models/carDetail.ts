@@ -4,8 +4,9 @@ export interface CarDetail{
     brandName:string;
     colorName:string;
     unitPrice:number;
-    images:string[]
-    colorId?:number
-    brandId?:number
+    images:string[];
+    colorId?:number;
+    brandId?:number;
+    carFindexScore:number;
     
 }

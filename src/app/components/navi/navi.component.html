@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="cars">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/mypage">About Me</a>
@@ -16,14 +16,30 @@
           <a class="nav-link " routerLink="/contact" tabindex="-1" >Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">User Operations</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown08">
-            <li><a class="dropdown-item" >Register</a></li>
-            <li><a class="dropdown-item" href="#">User Information</a></li>
-            <li><a routerLink="/login" class="dropdown-item" href="#">Login</a></li>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+
+          <ul  class="dropdown-menu" aria-labelledby="dropdown08">
+
+
+            <div *ngIf="checkToLogin()==false">
+
+              <li><a routerLink="/register" class="dropdown-item" >Register</a></li>
+              <li><a  routerLink="/login" class="dropdown-item" >Login</a></li>
+
+            </div>
+
+            <div *ngIf="checkToEmail()==true">
+
+              <li><a class="dropdown-item">{{this.user.firstName}} {{this.user.lastName}}</a></li>
+
+            </div>
+
           </ul>
+
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
