@@ -1,134 +1,3 @@
-<!-- 
-  
-  <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-
-  <div class="mb-3">
-    <label for="filterText" class="form-label">Ürün ara</label>
-    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="arama ifadesi giriniz" aria-describedby="emailHelp">
-  
-  </div>
-  
-  <div *ngIf="filterText" class="alert alert-success">
-      {{filterText}} aradınız
-  </div>
-
-<table *ngIf="dataLoaded==true" class="table">
-    <thead class="table-dark">
-        <tr>
-            <th>CarId</th>
-            <th>Araba İsmi</th>
-            <th>Marka Adı</th>
-            <th>Renk Adı</th>
-            <th>Birim Fiyatı</th>
-            <th>KDV'li Fiyat</th>
-            <th style="text-align: center;">Detay Bilgiler</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of cars | filterPipe:filterText">
-        <td>{{car.carId}}</td>
-        <td>{{car.carName |uppercase}}</td>
-        <td>{{car.brandName}}</td>
-        <td>{{car.colorName}}</td>
-        <td>{{car.unitPrice |currency:"TRY":"₺":""}}</td>
-        <td>{{car.unitPrice |vatAdded:18 |currency: "TRY":"₺":"" }}</td>
-        <td>
-          <div class="btn-group" role="group" aria-label="Basic example">
-          <button  routerLink="/cars/cardetail/{{car.carId}}" type="button" class="btn btn-primary">Araba Detay</button>
-          <button  routerLink="/cars/add" type="button" class="btn btn-primary">Araba Ekle</button>
-          <button  routerLink="/cars/update/{{car.carId}}" type="button" class="btn btn-primary">Güncelle</button>
-          <button type="button" class="btn btn-primary">Sil</button>
-        </div>
-      </td>
-
-     </tr>
-    </tbody>
-   
-
-</table>
-
-
- -->
-<!-- 
- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
-
-
- <style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
-  
-</style>
-<body>
-  
-  
- <main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Rent A Car Project</h1>
-        <p class="lead text-muted">This project is the result of 3 months of labor and learning phase.Together with our instructor Engin Demiroğ, we developed both backend and frontend with 3 hours of lessons 2 days a week.</p>
-        <p>
-          <a href="https://github.com/veyselhim" class="btn btn-secondary my-2">Github   <img src="assets/images/github.png" alt="dd"></a><br>
-          <a href="https://www.linkedin.com/in/veyselhim/" class="btn btn-primary my-2">Linkedin <img src="assets/images/linkedin.png" alt="dd"></a>
-        </p>
-      </div>
-    </div>
-  </section>
-<div>
-  <app-color></app-color>
-  <app-brand></app-brand>
-
-</div>
-
- <div class="container">
-  <div *ngFor="let car of cars | filterPipe:filterText" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: inline-block; margin-right: 8px; margin-bottom: 8px;" >
-    <div class="col" >
-      <div class="card shadow-sm" style="width: 400px;">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-       
-
-        
-        <div class="card-body">
-          <p class="card-text">{{car.carName}}</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button  routerLink="/cars/cardetail/{{car.carId}}" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button  routerLink="/cars/update/{{car.carId}}" type="button" type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              <button  routerLink="/cars/add" type="button" type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-
-            </div>
-            <small class="text-muted">9 mins</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- </div>
- <div class="row" >
-  <div *ngFor="let car of cars" class="card" style="width:19rem">
-
-    <img [src]="car.images.length !== 0 ? imageBasePath+ car.images[0] : imageBasePath + defaultImg"
-      class="card-img-top" alt="Image" width="100%" height="100%" />
-  </div>    
-  
-  </div>
-
-</main> -->
 
 <head>
 
@@ -216,7 +85,29 @@
     </div>
   </section>
 
- <div class="album py-5 bg-light">
+<div class="p-3 mb-2 bg-light text-dark" style="height: 70px;">
+  <div class="mb-3" style="width: 25%; display: inline-block; margin-right: 300px;">
+    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="arama ifadesi giriniz" aria-describedby="emailHelp"> 
+   
+  </div>
+
+  <div style="display: inline-block;">
+    <app-brand></app-brand>
+  </div>
+
+  <div style="display: inline-block; margin-left: 150px;">
+    <app-color></app-color>
+  </div>
+  
+</div>
+  
+  
+  <div *ngIf="filterText" class="alert alert-success">
+      {{filterText}} aradınız
+  </div>
+
+
+ <div class="album py-5 bg-light">   
    <div class="container">
      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" *ngFor="let car of cars | filterPipe:filterText" style="display: inline-block; margin-right: 8px; margin-bottom: 8px;" >
       <div class="col" >
@@ -228,9 +119,8 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button  routerLink="/cars/cardetail/{{car.carId}}" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button  routerLink="/cars/update/{{car.carId}}" type="button" type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button  routerLink="/cars/update/{{car.carId}}"  type="button" type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                   <button  routerLink="/cars/add" type="button" type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-    
                 </div>   
               <small class="text-muted">9 mins</small>
             </div>
@@ -241,10 +131,8 @@
    </div>
  </div>
 
-
-
+ 
 </main>
-
 
 
  </body>

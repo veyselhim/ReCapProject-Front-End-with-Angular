@@ -2,15 +2,35 @@
 
 
 <div  class="card" style="height: auto; width: 75%; margin-left: 170px; ">
+  
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body" style="height: auto;">
-      <h5 class="card-title">Image</h5>
-      
+      <button routerLink="/cars" type="button" class="btn-close" aria-label="Close" style="float: right;"></button>
+<br><br>
+     
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
       <div class="carousel-inner">
         <div *ngFor="let car of Images ; index as i; first as firstImage " [ngClass]="{ active: firstImage }" class="carousel-item " data-bs-interval="10000">
           <img [src]="carDto.images.length !== 0 ? imageBasePath+ car: imageBasePath + defaultImg" width="auto" height="auto" class="d-block w-100" alt="Image">  
           </div>
         </div>
+    </div>
+  
+     
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
 
     </div>
@@ -19,6 +39,7 @@
       <li class="list-group-item">Brand : {{carDto.brandName}}</li>
       <li class="list-group-item">Color : {{carDto.colorName}}</li>
       <li class="list-group-item">Findex Point : {{carDto.carFindexScore}}</li>
+      <li class="list-group-item">Daily Price : {{carDto.unitPrice |vatAdded:18 |currency: "TRY":"₺":""}}</li>
 
     </ul>
     <div class="card-body">
@@ -33,12 +54,3 @@
 </div>
 
  
-
-
-
-
-  
-
-
-
-

@@ -50,6 +50,7 @@ export class CarDetailComponent implements OnInit {
       this.carDto=response.data[0];
       this.dataLoaded=true;
       this.Images=this.carDto.images
+      console.log(response)
 
     })
   }

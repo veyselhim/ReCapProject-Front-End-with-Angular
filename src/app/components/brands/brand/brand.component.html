@@ -5,7 +5,8 @@
 
 
 
-<div style="width: 200px;  float: right; margin-right: 65px;">
+<div style="width: 200px;"> 
+  <div style="display: inline-block;">
 
   <select (change)="selectChangeHandler($event)" [(ngModel)]="brandId"  class="form-select" aria-label="Default select example" >
 
@@ -16,15 +17,17 @@
   
 
   </select> 
+ </div>
 
+  
+ <div style="display: inline-block;position: absolute; ">
+  <button routerLink="/cars/brand/{{brandId}}" type="button" class="btn btn-success" style="width: 90px; " >Filtrele</button>
+
+ </div>
 
 
 </div>
 
 
-<div style=" display: inline-block; float: right;" >
-  <button routerLink="/cars/brand/{{brandId}}" type="button" class="btn btn-success" style="width: 90px;" >Filtrele</button>
-
-</div>
 
 

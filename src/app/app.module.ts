@@ -15,7 +15,7 @@ import { BrandComponent } from './components/brands/brand/brand.component';
 import { ColorComponent } from './components/colors/color/color.component';
 import { RentalComponent } from './components/rentals/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
-import { CustomerComponent } from './components/customer/customer.component';
+import { CustomerComponent } from './components/customers/customer/customer/customer.component';
 import { CarDetailComponent } from './components/cars/car-detail/car-detail.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
@@ -31,6 +31,9 @@ import { BrandDetailComponent } from './components/brands/brand-detail/brand-det
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ColorDetailComponent } from './components/colors/color-detail/color-detail.component';
+import { CustomerDetailComponent } from './components/customers/customer/customer-detail/customer-detail.component';
+import { CustomerAddComponent } from './components/customers/customer-add/customer-add.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { RegisterComponent } from './components/register/register.component';
     MyPageComponent,
     ContactComponent,
     RegisterComponent,
+    ColorDetailComponent,
+    CustomerDetailComponent,
+    CustomerAddComponent,
   ],
   imports: [
     BrowserModule,

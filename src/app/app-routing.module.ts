@@ -13,6 +13,9 @@ import { BrandDetailComponent } from './components/brands/brand-detail/brand-det
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ColorDetailComponent } from './components/colors/color-detail/color-detail.component';
+import { CustomerDetailComponent } from './components/customers/customer/customer-detail/customer-detail.component';
+import { CustomerAddComponent } from './components/customers/customer-add/customer-add.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:CarComponent},
@@ -29,7 +32,12 @@ const routes: Routes = [
   {path:"brands",component:BrandDetailComponent},
   {path:"mypage",component:MyPageComponent},
   {path:"contact",component:ContactComponent},
-  {path:"register",component:RegisterComponent}
+  {path:"register",component:RegisterComponent},
+  {path:"colors",component:ColorDetailComponent},
+  {path:"customers",component:CustomerDetailComponent},
+  {path:"customers/add",component:CustomerAddComponent}
+
+
 
 
 

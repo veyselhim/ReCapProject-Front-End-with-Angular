@@ -1,0 +1,52 @@
+<div class="content" style="width: 400px; margin-left: 35%; margin-bottom: 10%; margin-top: 5%;">
+
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Add Customer</h5></div>
+            <div class="card-body">
+                <form [formGroup]="customerAddForm">
+
+
+                    <div class="mb-3">
+                        <label  for="Müşteri">User Id</label>
+
+                         <div class="form-group">
+                             <input type="number" id="userId" formControlName="userId" class="form-control" placeholder="User id"/>  <!--ilişkilendirme formControlName ile yapılır-->
+                         </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label  for="Müşteri">Customer Findex Score</label>
+
+                         <div class="form-group">
+                             <input type="number" id="customerFindexScore" formControlName="customerFindexScore" class="form-control" placeholder="Customer findex score"/>  <!--ilişkilendirme formControlName ile yapılır-->
+                         </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label  for="Müşteri">Company Name</label>
+
+                         <div class="form-group">
+                             <input type="text" id="companyName" formControlName="companyName" class="form-control" placeholder="Company name"/>  <!--ilişkilendirme formControlName ile yapılır-->
+                         </div>
+                    </div>
+
+                    
+                    
+                </form>
+
+            </div>
+            <div class="card-footer">
+
+                <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+   
+
+</div>
